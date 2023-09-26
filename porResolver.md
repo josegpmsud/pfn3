@@ -34,5 +34,18 @@ id_clase(FK)
 id_usuario_alumno(FK)
 nota_alumno
 
+#----------------
+#CRUD
+
+#Views
+1) index.php---->>>> login
+
+
+#Handle_db
+
+
+#reinstalar paso 4  tailwind css
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
 
 
