@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     
     try{
         
-    $stmnt = $mysqli->query("SELECT * FROM usuarios WHERE email='$email'");
+    $stmnt = $mysqli->query("SELECT * FROM usuarios u inner join roles r on u.id_rol = r.id_rol WHERE email='$email'");
 
     if($stmnt->num_rows === 1){
         $result = $stmnt->fetch_assoc();
