@@ -32,7 +32,7 @@
 
                 </p>
 
-                <form action="../src/handle_db/login.php" method="post">
+                <form action="./src/handle_db/login.php" method="post">
 
                     <div class="">
                         
@@ -43,7 +43,7 @@
 
                     <div class="">
                         
-                        <input class="" type="password" placeholder="Password" name="pass" require>
+                        <input class="" type="password" placeholder="Password" name="contrasena" require>
                         <span class="material-symbols-outlined"> lock </span>
                     
                     </div>
@@ -74,7 +74,12 @@
             </div>
         </div>
     </main>
+    
+    <?php
+            $pass = password_hash("alumno", PASSWORD_DEFAULT);
 
+            //echo "<h1>". $pass ."</h1>";
+        ?>
 
 
 

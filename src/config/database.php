@@ -1,15 +1,17 @@
 <?php
 
 try {
-   $host = "localhost";
-   $username ="root";
-   $password = "";
-   $dbname = "universidad_db";
-   $dsn = "mysql:host=$host;dbname=$dbname";
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "universidad_db";
 
-   $pdo = new PDO($dsn, $username, $password);
-   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $mysqli = new mysqli($host, $username, $password, $database);
 
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+}catch (mysqli_sql_exception $e){
+    
+    echo "La conexion Fallo";
+    echo "Erro: " . $e->getMessage();
 }
+
+?>
