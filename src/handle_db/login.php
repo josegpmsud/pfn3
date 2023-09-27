@@ -4,7 +4,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $email = $_POST["email"];
     $contrasena = $_POST["contrasena"];
 
-    if($email == ""){
+    if($email == "" || $contrasena == "" ){
         header("Location: ../../index.php");
     }
     
@@ -36,12 +36,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     }catch(mysqli_sql_exception $e){
         echo "Error" . $e->getMessage();
-       //header("Location: ../index.php");
+        header("Location: ../../index.php");
 
     }
-
-
-    
 
 }else{
     echo "No estas usando POST para acceder a este archivo";

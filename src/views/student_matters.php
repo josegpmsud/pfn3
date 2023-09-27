@@ -42,10 +42,56 @@
                     <tr class=''>                        
                         <td>$id_clase</td>                        
                         <td>$nombre_clase</td>                                             
-                        <td>                            
+                        <td>
+                        <form action='../handle_db/student/remove_matter.php' method='post'>
+                        <input name='id_clase' hidden type='text' value='$id_clase'>
+                        <button type='submit'>
                             <span class='material-symbols-outlined'>
-                                delete
+                               remove_selection
                             </span>
+                        </button>
+                        </form>
+                        </td> 
+                        </tr>                   
+                        ";
+                }
+            ?>
+                </tbody> 
+
+            </table>
+
+            <table class="table-show">
+                <thead>
+                    <tr>
+                        <td>#</td>                        
+                        <td>Materia</td>
+                        <td>Inscribir</td>                                      
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
+                $id_usuario_alumno = $_SESSION['sesion']['id_usuario'];
+
+                $stmnt = $mysqli->query("select c.id_clase, c.nombre_clase  from clases c left join inscripciones i on c.id_clase = i.id_clase and i.id_usuario_alumno = 3 where i.id_incripcion is null");
+
+                while($row = $stmnt->fetch_assoc()){
+                    $id_clase = $row["id_clase"];                    
+                    $nombre_clase = $row["nombre_clase"];                     
+                    echo " 
+                    <tr class=''>                        
+                        <td>$id_clase</td>                        
+                        <td>$nombre_clase</td>                                             
+                        <td>
+                        <form action='../handle_db/student/register_matter.php' method='post'>
+                        <input name='id_clase' hidden type='text' value='$id_clase'>
+                        <button type='submit'>
+                        <span class='material-symbols-outlined'>
+                        beenhere
+                        </span>
+                        </button>
+                        </form>                                
+                            
                         </td>
                         
                         
@@ -55,11 +101,6 @@
 
             ?>
                 </tbody>
-
-
             </table>
-
         </main>
-
-
     </section>
