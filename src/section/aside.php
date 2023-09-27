@@ -37,13 +37,12 @@
     <?php if($_SESSION['sesion']['id_rol'] == 2){
     echo "
     <section>
-    <h1>MENU MAESTROS</h1>
-    <p><span class='material-symbols-outlined'>
-            school
-        </span><a href='../views/students.php'>Alumnos</a></p>
-    <p><span class='material-symbols-outlined'>
-            co_present
-        </span><a href='../views/matters.php'>Clases</a></p>        
+        <h1>MENU MAESTROS</h1>
+        <p>
+            <span class='material-symbols-outlined'>
+                co_present
+            </span><a href='../views/teacher_matters.php'>Clases</a>
+        </p>        
     </section>
     ";
     } 
@@ -55,10 +54,10 @@
     <h1>MENU ALUMNOS</h1>
     <p><span class='material-symbols-outlined'>
         task
-    </span><a href='../views/students.php'>Ver Calificaciones</a></p>
+    </span><a href='../../src/views/student_qualifications.php'>Ver Calificaciones</a></p>
     <p><span class='material-symbols-outlined'>
             co_present
-        </span><a href='../views/matters.php'>Administra tus Clases</a></p>
+        </span><a href='../../src/views/student_matters.php'>Administra tus Clases</a></p>
     </section>
     ";
     } 

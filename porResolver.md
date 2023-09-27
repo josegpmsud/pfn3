@@ -33,6 +33,7 @@ id_inscripcion(PK)
 id_clase(FK)
 id_usuario_alumno(FK)
 nota_alumno
+mensaje
 
 #----------------
 #CRUD

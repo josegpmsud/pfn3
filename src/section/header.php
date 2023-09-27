@@ -1,17 +1,12 @@
-
-<?php
-session_start()
-?>
+<?php session_start() ?>
 
 <?php 
 if(isset($_SESSION['sesion']['id_rol'])){
     }
 else{
     header("Location: ../../index.php");
-}
-    
+}    
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
