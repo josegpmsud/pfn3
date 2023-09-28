@@ -21,6 +21,7 @@
                     <?php
                 require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
                 $id_clase = $_GET['id_clase'];
+                $id_clase2 = $_GET['id_clase'];
 
                 $stmnt = $mysqli->query("SELECT * FROM usuarios u inner join inscripciones i on u.id_usuario = i.id_usuario_alumno where id_clase = '$id_clase'");
 
@@ -35,6 +36,7 @@
                     $fecha_nac = $row["fecha_nac"];
                     $estado = $row["estado"];
                     $id_rol = $row["id_rol"];
+                    $id_inscripcion = $row["id_inscripcion"];
                     $nota_alumno = $row["nota_alumno"];
                     $mensaje = $row["mensaje"];
                     
@@ -46,20 +48,38 @@
                     <tr class=''>                        
                         <td>$id_usuario</td>                        
                         <td>$nombre $apellido</td>                                             
-                        <td>$nota_alumno</td>
-                        <td>$mensaje</td>                        
+                        <td>
+
+
+                        <form action='../handle_db/student/edit_qualification.php' method='post'>
+
+                        <input hidden name='id_clase'  type='text' value='$id_clase2'>
+
+                        <input hidden name='id_inscripcion'  type='text' value='$id_inscripcion'>
+
+                        <input name='nota_alumno'  type='text' value='$nota_alumno'>
+                                                
+                        </td>
                         
                         <td>
+                        <input name='mensaje'  type='text' value='$mensaje'>
+                                                
+                        </td>                        
+                                                
+                        <td>
+                        <button type='submit'>
                             <span class='material-symbols-outlined'>
                                 edit_square
                             </span>
-                            <span class='material-symbols-outlined'>
-                                delete
-                            </span>
+                        </button>
+                        <span class='material-symbols-outlined'>
+                        delete
+                        </span>
                         </td>
                         </tr>                   
-                        ";
-                }
+                        
+                        </form>";
+                    }
 
             ?>
                 </tbody>

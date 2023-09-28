@@ -66,7 +66,7 @@
                 require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
                 $id_usuario_alumno = $_SESSION['sesion']['id_usuario'];
 
-                $stmnt = $mysqli->query("select c.id_clase, c.nombre_clase  from clases c left join inscripciones i on c.id_clase = i.id_clase and i.id_usuario_alumno = '$id_usuario_alumno' where i.id_incripcion is null");
+                $stmnt = $mysqli->query("select c.id_clase, c.nombre_clase  from clases c left join inscripciones i on c.id_clase = i.id_clase and i.id_usuario_alumno = '$id_usuario_alumno' where i.id_inscripcion is null");
 
                 while($row = $stmnt->fetch_assoc()){
                     $id_clase = $row["id_clase"];                    

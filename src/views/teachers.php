@@ -48,9 +48,25 @@
                         <td>$email</td>
                         <td>$direccion </td>                        
                         <td>$fecha_nac</td>                        
-                        <td><span class='material-symbols-outlined'>
-                        search
-                        </span></td>
+                        <td>";
+                        
+                        
+                        $stmnt2 = $mysqli->query("SELECT * FROM clases where id_usuario_maestro = '$id_usuario'");
+                        
+                        $cont = 0;
+                        while($row2 = $stmnt2->fetch_assoc()){
+                            $cont ++;
+                        }
+                        
+                        if($cont>0){
+                            echo $cont;
+                        }else{
+                            echo "<span>Sin clases</span>";
+                        } 
+                        
+                        
+                        echo "
+                        </td>
                         <td>
                         <form action='./edit_user.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
@@ -59,8 +75,10 @@
                                 edit_square
                             </span>
                         </button>
-                        </form>
+                        </form>";
                         
+                        if($cont==0){
+                        echo"
                         <form action='../handle_db/teacher/delete_teacher.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
                         <button type='submit'>
@@ -68,8 +86,8 @@
                                 delete
                             </span>
                         </button>
-                        </form>
-                           
+                        </form>";}
+                        echo "   
                         </td>
                         </tr>                   
                         ";

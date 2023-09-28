@@ -1,10 +1,17 @@
 #por resolver en codigo
 
--arreglar consulta de alumno y materias disponibles dentro de vista alumno
+-diseño con tailwind css
 -cuando se edite los permisos de usuario que se debe hacer con maestros y alumnos que ya tengan clases asignadas.
--editar clase desde admin
--editar permisos desde admin
--como puedo colocar por defecto una fila en un select ejemplo el maestro que tiene la clase
+
+-editar estado en permisos desde admin
+-que hacer cuando el permiso
+
+-habilitar los botones eliminar
+-editar calificaciones y mensajes
+
+-que paresca el nombre de la clase, o nombre del alumno o maestro con la tabla actual que se este trabajando
+
+
 
 base de datos:
 universidad_db

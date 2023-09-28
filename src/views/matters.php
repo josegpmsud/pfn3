@@ -47,7 +47,23 @@
                         <td>$id_clase</td>  
                         <td>$nombre_clase</td>
                         <td>$nombre $apellido</td>                                             
-                        <td></td>                        
+                        <td>";
+                        
+                        $stmnt2 = $mysqli->query("SELECT * FROM usuarios u inner join inscripciones i on u.id_usuario = i.id_usuario_alumno where id_clase = '$id_clase'");
+                        
+                        $cont = 0;
+                        while($row2 = $stmnt2->fetch_assoc()){
+                            $cont ++;
+                        }
+                        if($cont>0){
+                            echo $cont;
+                        }else{
+                            echo "<span>Sin alumnos</span>";
+                        } 
+                        
+                                                
+                        echo "
+                        </td>                        
                         <td>
                         <form action='./edit_matter.php' method='post'>
                         <input name='id_clase' hidden type='text' value='$id_clase'>
@@ -57,8 +73,11 @@
                                 edit_square
                             </span>
                         </button>
-                        </form>
+                        </form>";
                         
+                        if($cont==0){
+
+                        echo"                        
                         <form action='../handle_db/teacher/delete_teacher.php' method='post'>
                         <input name='id_clase' hidden type='text' value='$id_clase'>
                         <button type='submit'>
@@ -66,8 +85,8 @@
                                 delete
                             </span>
                         </button>
-                        </form>
-                            
+                        </form>";}
+                        echo"      
                         </td>
                         </tr>                   
                         ";

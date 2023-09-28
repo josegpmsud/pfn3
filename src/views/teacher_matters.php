@@ -47,11 +47,31 @@
                         <td>$id_clase</td>  
                         <td>$nombre_clase</td>
                                                                  
-                        <td><a href='./teacher_students.php?id_clase=$id_clase'>ver</a></td>                        
+                        <td>";
+                        
+                        
+                        
+                        
+                        $stmnt2 = $mysqli->query("SELECT * FROM usuarios u inner join inscripciones i on u.id_usuario = i.id_usuario_alumno where id_clase = '$id_clase'");
+                        
+                        $cont = 0;
+                        while($row2 = $stmnt2->fetch_assoc()){
+                            //$id_usuario2 = $row2 ['id_usuario'];
+                            //echo " $id_usuario2 ";
+                            $cont ++;
+                        }
+                        echo $cont;
+                        
+                        echo"
+                        
+                        </td>                        
                         <td>
-                            <span class='material-symbols-outlined'>
-                                edit_square
-                            </span>
+                            <a href='./teacher_students.php?id_clase=$id_clase'>
+                                <span class='material-symbols-outlined'>
+                                    edit_square
+                                </span> 
+                            </a>    
+                        
                             <span class='material-symbols-outlined'>
                                 delete
                             </span>
