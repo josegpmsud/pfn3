@@ -1,17 +1,10 @@
-<?php require_once("../section/header.php");?>
+<?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
-<body class="w-screen flex gap-3">
-
-    <?php require_once("../section/aside.php"); ?>
-
-    <section>
-
-        <?php require_once("../section/nav.php"); ?>
         <main>
             <h1>Lista de Maestros</h1>
             <section>
                 <h2>Informacion de Maestros</h2>
-                <p></p>
+                <a href="./create_teacher.php">Agregar Maestro</a>
             </section>
 
             <table class="">
@@ -78,5 +71,4 @@
 
         </main>
 
-
-    </section>
+<?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/fin.php");?>

@@ -1,17 +1,10 @@
-<?php require_once("../section/header.php");?>
+<?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
-<body class="w-screen flex gap-3">
-
-    <?php require_once("../section/aside.php"); ?>
-
-    <section>
-
-        <?php require_once("../section/nav.php"); ?>
         <main>
             <h1>Lista de Alumnos</h1>
             <section>
                 <h2>Informacion de Alumnos</h2>
-                <p></p>
+                <a href="./create_student.php">Agregar Alumno</a>
             </section>
 
             <table class="table-show">
@@ -77,4 +70,4 @@
         </main>
 
 
-    </section>
+<?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/fin.php");?>

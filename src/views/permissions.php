@@ -1,12 +1,5 @@
-<?php require_once("../section/header.php");?>
+<?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
-<body class="w-screen flex gap-3">
-
-    <?php require_once("../section/aside.php"); ?>
-
-    <section>
-
-        <?php require_once("../section/nav.php"); ?>
         <main>
             <h1>Lista de Permisos</h1>
             <section>
@@ -71,5 +64,4 @@
 
         </main>
 
-
-    </section>
+<?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/fin.php");?>
