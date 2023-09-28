@@ -1,14 +1,14 @@
 <?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
         <section class="cont-edit">
-            <form action="../handle_db/update.php" method="post" enctype="multipart/form-data">
+            <form action="../handle_db//teacher/create_teacher.php" method="post" enctype="multipart/form-data">
 
                 <h1>Agregar Maestro</h1>                
                 
                 <input type="text" hidden name="id_rol" id="id_rol" value="2">
 
                 <label class="" for="dni">DNI</label><br>
-                <input type="text"   name="dni" id="dni" placeholder="Ingrese la Matricula">
+                <input type="text"   name="dni" id="dni" placeholder="Ingrese la DNI">
 
                 <br> <br>
 

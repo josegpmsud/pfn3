@@ -1,7 +1,7 @@
 <?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
         <section class="cont-edit">
-            <form action="../handle_db/update.php" method="post" enctype="multipart/form-data">
+            <form action="../handle_db//student/create_student.php" method="post" enctype="multipart/form-data">
 
                 <h1>Agregar Alumno</h1>                
                 

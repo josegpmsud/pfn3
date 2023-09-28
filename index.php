@@ -71,6 +71,8 @@
                 <p class="">Alumnos</p>
                 <p class="">user: alumno@alumno</p>
                 <p class="">pass: alumno</p>
+
+                <p class="">Cuando cree un alumno o maestro nuevo la contraseña por defecto es igual al correo electronico</p>
             </div>
         </div>
     </main>

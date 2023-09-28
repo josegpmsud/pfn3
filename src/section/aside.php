@@ -11,6 +11,7 @@
     <section>
         <h1><?= ucwords($_SESSION['sesion']['descripcion']);?></h1>
         <p><?= $_SESSION['sesion']['nombre']; ?></p>
+        <?php $id_usuario = $_SESSION['sesion']['id_usuario'];?>
 
     </section>
     <?php if($_SESSION['sesion']['id_rol'] == 1){
@@ -43,7 +44,20 @@
                 co_present
             </span><a href='../views/teacher_matters.php'>Clases</a>
         </p>        
-    </section>
+    
+        <p>
+        <form action='./edit_user.php' method='post'>
+        <input name='id_usuario' hidden type='text' value='$id_usuario'>
+        <button type='submit'>
+            <span class='material-symbols-outlined'>
+                manage_accounts
+            </span>
+            Editar perfil
+        </button>
+        </form>
+        </p>
+    
+        </section>
     ";
     } 
     ?>
@@ -58,10 +72,29 @@
     <p><span class='material-symbols-outlined'>
             co_present
         </span><a href='../../src/views/student_matters.php'>Administra tus Clases</a></p>
+    
+    <p>
+        <form action='./edit_user.php' method='post'>
+        <input name='id_usuario' hidden type='text' value='$id_usuario'>
+        <button type='submit'>
+            <span class='material-symbols-outlined'>
+                manage_accounts
+            </span>
+            Editar perfil
+        </button>
+        </form>
+    </p>
+    
+    
     </section>
     ";
     } 
     ?>
+                        
+                        
+                        
+
+
 
 
 </aside>

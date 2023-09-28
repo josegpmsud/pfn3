@@ -52,18 +52,32 @@
                         search
                         </span></td>
                         <td>
+                        <form action='./edit_user.php' method='post'>
+                        <input name='id_usuario' hidden type='text' value='$id_usuario'>
+                        <button type='submit'>
                             <span class='material-symbols-outlined'>
                                 edit_square
                             </span>
+                        </button>
+                        </form>
+                        
+                        <form action='../handle_db/teacher/delete_teacher.php' method='post'>
+                        <input name='id_usuario' hidden type='text' value='$id_usuario'>
+                        <button type='submit'>
                             <span class='material-symbols-outlined'>
                                 delete
                             </span>
+                        </button>
+                        </form>
+                           
                         </td>
                         </tr>                   
                         ";
                 }
 
             ?>
+                
+
                 </tbody>
 
 
