@@ -49,21 +49,31 @@
                         <td>$nombre $apellido</td>                                             
                         <td></td>                        
                         <td>
+                        <form action='./edit_matter.php' method='post'>
+                        <input name='id_clase' hidden type='text' value='$id_clase'>
+                        <input name='nombre_maestro' hidden type='text' value='$nombre $apellido'>
+                        <button type='submit'>
                             <span class='material-symbols-outlined'>
                                 edit_square
                             </span>
+                        </button>
+                        </form>
+                        
+                        <form action='../handle_db/teacher/delete_teacher.php' method='post'>
+                        <input name='id_clase' hidden type='text' value='$id_clase'>
+                        <button type='submit'>
                             <span class='material-symbols-outlined'>
                                 delete
                             </span>
+                        </button>
+                        </form>
+                            
                         </td>
                         </tr>                   
                         ";
                 }
-
             ?>
                 </tbody>
-
-
             </table>
 
         </main>

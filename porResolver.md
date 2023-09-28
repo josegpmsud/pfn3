@@ -1,3 +1,11 @@
+#por resolver en codigo
+
+-arreglar consulta de alumno y materias disponibles dentro de vista alumno
+-cuando se edite los permisos de usuario que se debe hacer con maestros y alumnos que ya tengan clases asignadas.
+-editar clase desde admin
+-editar permisos desde admin
+-como puedo colocar por defecto una fila en un select ejemplo el maestro que tiene la clase
+
 base de datos:
 universidad_db
 

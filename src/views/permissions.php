@@ -49,9 +49,18 @@
                         <td>$email</td>
                         <td>$descripcion </td>                        
                         <td>$estado_d</td>
-                        <td><span class='material-symbols-outlined'>
-                        edit_square
-                        </span></td>
+                        <td>
+                        <form action='./edit_permission.php' method='post'>
+                        <input name='id_usuario' hidden type='text' value='$id_usuario'>
+                        <input name='descripcion' hidden type='text' value='$descripcion'>
+                        <button type='submit'>
+                            <span class='material-symbols-outlined'>
+                                edit_square
+                            </span>
+                        </button>
+                        </form>
+                        
+                        </td>
                     </tr>                   
                     ";
                 }
