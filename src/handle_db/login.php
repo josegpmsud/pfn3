@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $contrasena = $_POST["contrasena"];
 
     if($email == "" || $contrasena == "" ){
-        header("Location: ../../index.php");
+        header("Location: /index.php");
     }
     
     require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
@@ -16,27 +16,32 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     if($stmnt->num_rows === 1){
         $result = $stmnt->fetch_assoc();
-        //var_dump($result);
+        
         if(password_verify($contrasena, $result['contrasena'])){
-            //var_dump($result['pass']);
+            
             session_start();
             $_SESSION['email'] = $email;
             $_SESSION['contrasena'] = $contrasena;
             $_SESSION['sesion'] = $result;
 
+            if($_SESSION['sesion']['estado'] == 0){
+                session_destroy();
+                header("Location: /index.php");
+            }
+
             echo "ingresaste correctamente";
-            //header("Location: ../views/show.php?email=$email");
-            header("Location: ../views/dashboard.php");
+            
+            header("Location: /src/views/dashboard.php");
         }else{
-            //var_dump($result['pass']);
-            header("Location: ../../index.php");
-            //echo "no es correcta la contraseña";
+            
+            header("Location: /index.php");
+            
         }
     }
 
     }catch(mysqli_sql_exception $e){
         echo "Error" . $e->getMessage();
-        header("Location: ../../index.php");
+        header("Location: /index.php");
 
     }
 

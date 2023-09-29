@@ -1,66 +1,98 @@
-#por resolver en codigo
+# por resolver en codigo
 
--diseño con tailwind css
--cuando se edite los permisos de usuario que se debe hacer con maestros y alumnos que ya tengan clases asignadas.
-
--editar estado en permisos desde admin
--que hacer cuando el permiso
-
--habilitar los botones eliminar
--editar calificaciones y mensajes
-
--que paresca el nombre de la clase, o nombre del alumno o maestro con la tabla actual que se este trabajando
+## Consideraciones para la calificación por cumplir
 
 
-
-base de datos:
-universidad_db
-
-#TABLAS
-
-#usuarios:
-
-id_usuario(PK)
-dni
-email
-contrasena
-nombre
-apellido
-direccion
-fecha_nac
-estado(activo:si/no)
-id_rol(FK)
+- diseño con tailwind css
 
 
-#roles:
-id_rol
-descriccion(administrador(1), maestro(2), alumno(3))
+### admin
+
+- Relacionar un maestro a un curso (o más, si gustas).
+- Eliminar maestros no requiere que dicho maestro no tenga cursos asignados, se puede eliminar un maestro sin necesidad de dicha corroboración.
+- Cambiar el rol de cada usuario (no se permite crear nuevos roles). validar si si tiene clases, que dependan de el o inscripciones si fuera alumno
+
+- cuando se edite los permisos de usuario ¿que se debe hacer con maestros y alumnos que ya tengan clases asignadas?.
+
+- editar estado en permisos desde admin
+- que hacer cuando el permiso
+
+- habilitar los botones eliminar
+- editar calificaciones y mensajes
+
+- que paresca el nombre de la clase, o nombre del alumno o maestro con la tabla actual que se este trabajando
+
+- eliminar alumnos, maestros 
+
+- agregar multi-seleccion a inscripcion de alumnos(ejemlo del profesor en clases)
+
+- agregar asignacion de maestros clases
+
+## Consideraciones OPCIONALES que suman puntos:
 
 
-#clase:
-id_clase(PK)
-nombre_clase
-id_usuario_maestro(FK)
+- Activar o desactivar a un usuario en el panel de administrador (quiere decir que si un usuario ha sido desactivado, no debería poder acceder con sus credenciales hasta que sea activado nuevamente).
 
 
-#incripciones
-id_inscripcion(PK)
-id_clase(FK)
-id_usuario_alumno(FK)
-nota_alumno
-mensaje
+- El admin puede ver la cantidad de alumnos inscritos en cada clase.
+- Cada maestro puede Crear, Leer, Actualizar y Eliminar calificaciones y comentarios de sus alumnos.
+- El alumno puede ver en la pestaña "Ver Calificaciones" un mensaje dejado por el maestro y la calificación de cada curso.
 
-#----------------
-#CRUD
+- Desarrollar toda la interfaz del usuario (UI) desde cero.
 
-#Views
-1) index.php---->>>> login
+#### Alguna otra funcionalidad acorde a la lógica del negocio.
 
-
-#Handle_db
+- Una maestro puede estar asignado a varias clases
+- Eliminar maestros requiere que dicho maestro no tenga cursos asignados.
+- Eliminar clases requiere que dicho clase no tenga alumnos inscritos.
+- Eliminar alumno requiere que dicho alumno no tenga clases inscritas.
 
 
-#reinstalar paso 4  tailwind css
+# Base de datos:
+- universidad_db
+
+## TABLAS
+
+### usuarios:
+
+- id_usuario(PK)
+- dni
+- email
+- contrasena
+- nombre
+- apellido
+- direccion
+- fecha_nac
+- estado(activo:si/no)
+- id_rol(FK)
+
+
+### roles:
+
+- id_rol
+- descripcion(administrador(1), maestro(2), alumno(3))
+
+
+### clases:
+
+- id_clase(PK)
+- nombre_clase
+- id_usuario_maestro(FK)
+
+
+### incripciones
+
+- id_inscripcion(PK)
+- id_clase(FK)
+- id_usuario_alumno(FK)
+- nota_alumno
+- mensaje
+
+
+
+
+# reinstalar paso 4  tailwind css
+
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 

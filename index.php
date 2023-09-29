@@ -32,7 +32,7 @@
 
                 </p>
 
-                <form action="./src/handle_db/login.php" method="post">
+                <form action="/src/handle_db/login.php" method="post">
 
                     <div class="">
                         

@@ -36,7 +36,7 @@
                         <td>$id_clase</td>                        
                         <td>$nombre_clase</td>                                             
                         <td>
-                        <form action='../handle_db/student/remove_matter.php' method='post'>
+                        <form action='/src/handle_db/student/remove_matter.php' method='post'>
                         <input name='id_clase' hidden type='text' value='$id_clase'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>
@@ -76,7 +76,7 @@
                         <td>$id_clase</td>                        
                         <td>$nombre_clase</td>                                             
                         <td>
-                        <form action='../handle_db/student/register_matter.php' method='post'>
+                        <form action='/src/handle_db/student/register_matter.php' method='post'>
                         <input name='id_clase' hidden type='text' value='$id_clase'>
                         <button type='submit'>
                         <span class='material-symbols-outlined'>

@@ -4,7 +4,7 @@
             <h1>Lista de Alumnos</h1>
             <section>
                 <h2>Informacion de Alumnos</h2>
-                <a href="./create_student.php">Agregar Alumno</a>
+                <a href="/src/views/create_student.php">Agregar Alumno</a>
             </section>
 
             <table class="table-show">
@@ -50,7 +50,7 @@
                         <td>$direccion </td>                        
                         <td>$fecha_nac</td>
                         <td>
-                        <form action='./edit_user.php' method='post'>
+                        <form action='/src/views/edit_user.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>
@@ -59,7 +59,7 @@
                         </button>
                         </form>
                         
-                        <form action='../handle_db/teacher/delete_teacher.php' method='post'>
+                        <form action='/src/handle_db/teacher/delete_teacher.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>

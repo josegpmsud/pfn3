@@ -1,7 +1,7 @@
 <?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
         <section class="cont-edit">
-            <form action="../handle_db//teacher/create_teacher.php" method="post" enctype="multipart/form-data">
+            <form action="/src/handle_db//teacher/create_teacher.php" method="post" enctype="multipart/form-data">
 
                 <h1>Agregar Maestro</h1>                
                 

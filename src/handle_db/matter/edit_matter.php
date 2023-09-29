@@ -16,6 +16,6 @@
         }
         
         
-        header("Location: ../../views/matters.php");          
+        header("Location: /src/views/matters.php");          
     }    
 ?>

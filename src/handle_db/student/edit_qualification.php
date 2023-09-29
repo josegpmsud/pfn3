@@ -17,6 +17,6 @@
         }
         
         
-        header("Location: ../../views/teacher_students.php?id_clase=$id_clase");          
+        header("Location: /src/views/teacher_students.php?id_clase=$id_clase");          
     }    
 ?>

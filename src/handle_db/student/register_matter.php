@@ -10,12 +10,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         
     try{        
         $stmnt = $mysqli->query("INSERT INTO inscripciones(id_usuario_alumno,id_clase) VALUES ('$id_usuario','$id_clase')");
-            header("Location: ../../views/student_matters.php");        
+            header("Location: /src/views/student_matters.php");        
     
-        }catch(mysqli_sql_exception $e){
+    }catch(mysqli_sql_exception $e){
             echo "Error" . $e->getMessage();
-            //header("Location: ../../index.php");    
-        }
+            
+    }
     
     }else{
         echo "No estas usando POST para acceder a este archivo";

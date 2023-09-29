@@ -10,7 +10,7 @@
     ?>
         
     <section class="cont-edit">
-            <form action="../handle_db/edit_user.php" method="post">
+            <form action="/src/handle_db/edit_user.php" method="post">
 
                 <h1>Editar 
                     <?php

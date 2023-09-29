@@ -4,7 +4,7 @@
 if(isset($_SESSION['sesion']['id_rol'])){
     }
 else{
-    header("Location: ../../index.php");
+    header("Location: /index.php");
 }    
 ?>
 

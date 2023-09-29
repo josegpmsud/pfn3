@@ -11,21 +11,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $direccion = $_POST['direccion'];
     $fecha_nac = $_POST['fecha_nac'];
    
-    //var_dump($_POST);
-
-    //var_dump($contrasena);
-    
     
     require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 
     try{
         $resultado = $mysqli->query("insert into usuarios(dni, email, contrasena, nombre, apellido, direccion, fecha_nac, estado, id_rol) values ('$dni','$email','$contrasena','$nombre','$apellido','$direccion','$fecha_nac', true, '$id_rol')");
-
-        //header("Location: ../views/create_teacher.php");
-        if($resultado){
+        
+        if($resultado){            
             
-            //header("Location: ../../views/teachers.php");
-            header("Location: ../../../views/teachers.php");
+            header("Location: /src/views/teachers.php");
             
         }else{
             "Error al guardar el maestro";
@@ -36,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         if($mysqli->errno == 1062){
             session_start();
             $_SESSION['duplicado'] = "ya existe";
-            header("Location: ../../../views/teachers.php");
+            header("Location: /src/views/teachers.php");
         }else{
             echo "Error" . $e->getMessage();
         }

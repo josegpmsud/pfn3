@@ -41,6 +41,6 @@
             $fecha_nac = $_POST["fecha_nac"];
             $result = $mysqli->query("UPDATE usuarios SET fecha_nac='$fecha_nac' WHERE id_usuario=$id_usuario");
         }
-        header("Location: ../views/dashboard.php");          
+        header("Location: /src/views/dashboard.php");          
     }    
 ?>

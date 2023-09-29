@@ -11,11 +11,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $direccion = $_POST['direccion'];
     $fecha_nac = $_POST['fecha_nac'];
    
-    //var_dump($_POST);
-
-    //var_dump($contrasena);
-    
-    
+        
     require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 
     try{
@@ -25,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         if($resultado){
             
             
-            header("Location: ../../../views/students.php");
+            header("Location: /src/views/students.php");
             
         }else{
             "Error al guardar el maestro";
@@ -36,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         if($mysqli->errno == 1062){
             session_start();
             $_SESSION['duplicado'] = "ya existe";
-            header("Location: ../../../views/students.php");
+            header("Location: /src/views/students.php");
         }else{
             echo "Error" . $e->getMessage();
         }

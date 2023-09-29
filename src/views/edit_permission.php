@@ -14,24 +14,24 @@
     ?>
         
     <section class="bg bg-orange-200 rounded-md gap-3 w-96 p-6 shadow-lg hover:shadow-xl">
-            <form action="/src/handle_db/matter/edit_permission.php" method="post" class="flex flex-col bg bg-orange-200 rounded-md gap-3">
+            <form action="/src/handle_db/permission/edit_permission.php" method="post" class="flex flex-col bg bg-orange-200 rounded-md gap-3">
                 
                 <h1 class="text-3xl font-bold underline">Editar Permiso</h1>
                 <input class="" hidden type="text" name="id_usuario" value="<?= $id_usuario?>" >
                 
                 <div class="">
                     <label for="email" class=""> Email del usuario</label><br>
-                    <input class="" type="text" name="email" placeholder="Ingresa email" value="<?= $email?>">
+                    <input class="" type="email" name="email" placeholder="Ingresa email" value="<?= $email?>">
                 </div>
                 <div class="">
-                    <label for="id_usuario_maestro" class=""> Rol del usuario </label>
+                    <label for="id_rol" class=""> Rol del usuario </label>
                     <select name="id_rol" id="id_rol" class="rounded-md">
 
                         <?php
                     echo "<option class='' value='$id_rol'>$descripcion</option>";
 
                     $stmnt = $mysqli->query("SELECT * FROM roles");
-                     //var_dump($stmnt);                  
+                                      
                     while($row = $stmnt->fetch_assoc()){
                         $id_rol = $row["id_rol"];
                         $descripcion = $row["descripcion"];
@@ -43,8 +43,22 @@
                 </div>
 
                 <div>
-                    <input type="checkbox" id="estado" name="estado" value="<?= $estado?>">
-                    <label for="estado">Usuario activo</label>
+                    <label for="estado">Acceso Usuario</label>
+                    <select name="estado" id="estado" class="rounded-md">
+                        <option class='' value='<?= $estado?>'>
+                            <?php if($estado == 1){echo "Activar";}elseif($estado == 0){echo "Desactivar";}?>
+                        </option>
+                        <?php 
+                            if($estado == 1){
+                                echo "<option class='' value='0'>Desactivar</option>";
+                            }else{
+                                echo "<option class='' value='1'>Activar</option>";
+                            }                        
+                        
+                        ?>
+                        
+                    </select>
+                                    
                 </div>
 
 

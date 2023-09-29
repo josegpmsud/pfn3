@@ -56,8 +56,7 @@
                         
                         $cont = 0;
                         while($row2 = $stmnt2->fetch_assoc()){
-                            //$id_usuario2 = $row2 ['id_usuario'];
-                            //echo " $id_usuario2 ";
+                           
                             $cont ++;
                         }
                         echo $cont;
@@ -66,7 +65,7 @@
                         
                         </td>                        
                         <td>
-                            <a href='./teacher_students.php?id_clase=$id_clase'>
+                            <a href='/src/views/teacher_students.php?id_clase=$id_clase'>
                                 <span class='material-symbols-outlined'>
                                     edit_square
                                 </span> 

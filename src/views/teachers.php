@@ -4,7 +4,7 @@
             <h1>Lista de Maestros</h1>
             <section>
                 <h2>Informacion de Maestros</h2>
-                <a href="./create_teacher.php">Agregar Maestro</a>
+                <a href="/src/views/create_teacher.php">Agregar Maestro</a>
             </section>
 
             <table class="">
@@ -68,7 +68,7 @@
                         echo "
                         </td>
                         <td>
-                        <form action='./edit_user.php' method='post'>
+                        <form action='/src/views/edit_user.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>
@@ -79,7 +79,7 @@
                         
                         if($cont==0){
                         echo"
-                        <form action='../handle_db/teacher/delete_teacher.php' method='post'>
+                        <form action='/src/handle_db/teacher/delete_teacher.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>

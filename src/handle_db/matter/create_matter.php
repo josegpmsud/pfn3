@@ -4,9 +4,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     
     $nombre_clase = $_POST["nombre_clase"];
     $id_usuario_maestro = $_POST["id_usuario_maestro"];
-    //$contrasena = password_hash($_POST["email"], PASSWORD_DEFAULT);
-
-    
+        
     require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 
     try{
@@ -14,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         if($resultado){
             
-            header("Location: ../../views/matters.php");
+            header("Location: /src/views/matters.php");
             
         }else{
             "Error al guardar el clase";
@@ -25,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         if($mysqli->errno == 1062){
             session_start();
             $_SESSION['duplicado'] = "ya existe";
-            header("Location: ../../views/matters.php");
+            header("Location: /src/views/matters.php");
         }else{
             echo "Error" . $e->getMessage();
         }

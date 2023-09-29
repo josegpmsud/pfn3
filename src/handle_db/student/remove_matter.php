@@ -10,11 +10,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         
     try{        
         $stmnt = $mysqli->query("DELETE FROM inscripciones WHERE id_usuario_alumno = '$id_usuario' and id_clase = '$id_clase'");
-            header("Location: ../../views/student_matters.php");        
+            header("Location: /src/views/student_matters.php");        
     
         }catch(mysqli_sql_exception $e){
-            echo "Error" . $e->getMessage();
-            //header("Location: ../../index.php");    
+            echo "Error" . $e->getMessage();            
         }
     
     }else{
