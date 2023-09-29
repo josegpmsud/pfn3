@@ -14,6 +14,7 @@
             <select name="id_usuario_maestro" id="id_usuario_maestro" class="rounded-md">
 
                 <?php
+                    echo "<option class='' value='0'>Por asignar maestro</option>";
                     require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 
                     $stmnt = $mysqli->query("SELECT * FROM usuarios where id_rol = 2");

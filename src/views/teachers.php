@@ -79,7 +79,7 @@
                         
                         if($cont==0){
                         echo"
-                        <form action='/src/handle_db/teacher/delete_teacher.php' method='post'>
+                        <form action='/src/handle_db/delete_user.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>

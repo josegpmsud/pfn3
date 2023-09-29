@@ -3,7 +3,7 @@
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     
     $nombre_clase = $_POST["nombre_clase"];
-    $id_usuario_maestro = $_POST["id_usuario_maestro"];
+    $id_usuario_maestro = $_POST["id_usuario_maestro"];    
         
     require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 

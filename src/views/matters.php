@@ -78,7 +78,7 @@
                         if($cont==0){
 
                         echo"                        
-                        <form action='/src/handle_db/teacher/delete_teacher.php' method='post'>
+                        <form action='/src/handle_db/matter/delete_matter.php' method='post'>
                         <input name='id_clase' hidden type='text' value='$id_clase'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>
@@ -94,6 +94,87 @@
             ?>
                 </tbody>
             </table>
+            <br>
+            <h1>CLASES POR ASIGNAR MAESTRO</h1>
+            <br>
+            <table class="table-show">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Clase</td>
+                        <td>Maestro</td>
+                        <td>Alumnos Inscritos</td>                        
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
+
+                $stmnt = $mysqli->query("SELECT * FROM clases c  where c.id_usuario_maestro = 0");
+
+                while($row = $stmnt->fetch_assoc()){
+                    $id_clase = $row["id_clase"];
+                    $nombre_clase = $row["nombre_clase"];
+                                       
+                                
+                
+                    echo "              
+                                        
+                    
+                    <tr class=''>                        
+                        <td>$id_clase</td>  
+                        <td>$nombre_clase</td>
+                        <td>Por Asignar maestro</td>                                             
+                        <td>";
+                        
+                        $stmnt2 = $mysqli->query("SELECT * FROM usuarios u inner join inscripciones i on u.id_usuario = i.id_usuario_alumno where id_clase = '$id_clase'");
+                        
+                        $cont = 0;
+                        while($row2 = $stmnt2->fetch_assoc()){
+                            $cont ++;
+                        }
+                        if($cont>0){
+                            echo $cont;
+                        }else{
+                            echo "<span>Sin alumnos</span>";
+                        } 
+                        
+                                                
+                        echo "
+                        </td>                        
+                        <td>
+                        <form action='/src/views/edit_matter.php' method='post'>
+                        <input name='id_clase' hidden type='text' value='$id_clase'>
+                        <input name='nombre_maestro' hidden type='text' value='$nombre $apellido'>
+                        <button type='submit'>
+                            <span class='material-symbols-outlined'>
+                                edit_square
+                            </span>
+                        </button>
+                        </form>";
+                        
+                        if($cont==0){
+
+                        echo"                        
+                        <form action='/src/handle_db/matter/delete_matter.php' method='post'>
+                        <input name='id_clase' hidden type='text' value='$id_clase'>
+                        <button type='submit'>
+                            <span class='material-symbols-outlined'>
+                                delete
+                            </span>
+                        </button>
+                        </form>";}
+                        echo"      
+                        </td>
+                        </tr>                   
+                        ";
+                }
+            ?>
+                </tbody>
+            </table>
+
+
 
         </main>
 

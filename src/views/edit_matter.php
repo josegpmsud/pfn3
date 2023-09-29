@@ -27,8 +27,14 @@
                     <select name="id_usuario_maestro" id="id_usuario_maestro" class="rounded-md">
 
                         <?php
-                    echo "<option class='' value='$id_usuario_maestro'>$nombre_maestro</option>";
+                    
+                    if($id_usuario_maestro != 0){
+                        echo "<option class='' value='$id_usuario_maestro'>$nombre_maestro</option>";
 
+                    }
+                    
+
+                    echo "<option class='' value='0'>Por asignar</option>";
                     $stmnt = $mysqli->query("SELECT * FROM usuarios where id_rol = 2");
                      var_dump($stmnt);                  
                     while($row = $stmnt->fetch_assoc()){

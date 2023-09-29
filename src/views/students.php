@@ -16,6 +16,7 @@
                         <td>Correo</td>
                         <td>Dirección</td>
                         <td>Fec. de Nacimiento</td>
+                        <td>Clases inscritas</td>
                         <td>Acciones</td>
                     </tr>
                 </thead>
@@ -49,6 +50,24 @@
                         <td>$email</td>
                         <td>$direccion </td>                        
                         <td>$fecha_nac</td>
+                        <td>";
+                        
+                        $stmnt2 = $mysqli->query("SELECT * FROM usuarios u inner join inscripciones i on u.id_usuario = i.id_usuario_alumno where id_usuario = '$id_usuario'");
+                        
+                        $cont = 0;
+                        while($row2 = $stmnt2->fetch_assoc()){
+                            $cont ++;
+                        }
+                        if($cont>0){
+                            echo $cont;
+                        }else{
+                            echo "<span>No tiene clases inscritas</span>";
+                        } 
+                        
+                        
+                        echo "</td>
+
+
                         <td>
                         <form action='/src/views/edit_user.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
@@ -57,9 +76,11 @@
                                 edit_square
                             </span>
                         </button>
-                        </form>
+                        </form>";
                         
-                        <form action='/src/handle_db/teacher/delete_teacher.php' method='post'>
+                        if($cont==0){
+                        echo"
+                        <form action='/src/handle_db/delete_user.php' method='post'>
                         <input name='id_usuario' hidden type='text' value='$id_usuario'>
                         <button type='submit'>
                             <span class='material-symbols-outlined'>
@@ -70,7 +91,7 @@
                            
                         </td>
                         </tr>                   
-                        ";
+                        ";}
                 }
 
             ?>

@@ -4,6 +4,7 @@
 
 
 - diseño con tailwind css
+- mejorar renderizado de ini y fin (para arreglar footer y otras secciones importantes)
 
 
 ### admin
@@ -12,15 +13,11 @@
 - Eliminar maestros no requiere que dicho maestro no tenga cursos asignados, se puede eliminar un maestro sin necesidad de dicha corroboración.
 - Cambiar el rol de cada usuario (no se permite crear nuevos roles). validar si si tiene clases, que dependan de el o inscripciones si fuera alumno
 
-- cuando se edite los permisos de usuario ¿que se debe hacer con maestros y alumnos que ya tengan clases asignadas?.
-
-- editar estado en permisos desde admin
-- que hacer cuando el permiso
+- cuando se edite los permisos de usuario ¿que se debe hacer con maestros o alumnos que ya tengan clases asignadas?.
 
 - habilitar los botones eliminar
-- editar calificaciones y mensajes
 
-- que paresca el nombre de la clase, o nombre del alumno o maestro con la tabla actual que se este trabajando
+- que aparesca el nombre de la clase, o nombre del alumno o maestro con la tabla actual que se este trabajando
 
 - eliminar alumnos, maestros 
 
