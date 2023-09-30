@@ -1,6 +1,6 @@
 <?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
-        <section class="cont-edit">
+        <section class=" bg-orange-200 rounded-md gap-3 w-96 p-6 shadow-lg hover:shadow-xl">
             <form action="/src/handle_db//student/create_student.php" method="post" enctype="multipart/form-data">
 
                 <h1>Agregar Alumno</h1>                
@@ -40,7 +40,7 @@
 
 
                 <a href="">Close</a>
-                <button class="" type="submit">Crear</button>
+                <button class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded text-white" type="submit">Crear</button>
 
 
             </form>

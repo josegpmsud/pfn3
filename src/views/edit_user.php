@@ -9,7 +9,7 @@
         $result = $stmnt->fetch_assoc();
     ?>
         
-    <section class="cont-edit">
+    <section class=" bg-orange-200 rounded-md gap-3 w-96 p-6 shadow-lg hover:shadow-xl">
             <form action="/src/handle_db/edit_user.php" method="post">
 
                 <h1>Editar 
@@ -66,7 +66,7 @@
 
 
                 <a href="#">Close</a>
-                <button class="" type="submit">Guardar cambios</button>
+                <button class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded text-white" type="submit">Guardar cambios</button>
 
 
             </form>

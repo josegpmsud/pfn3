@@ -4,7 +4,7 @@
             <h1>Lista de Alumnos</h1>
             <section>
                 <h2>Informacion de Alumnos</h2>
-                <a href="/src/views/create_student.php">Agregar Alumno</a>
+                <a class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded text-white" href="/src/views/create_student.php">Agregar Alumno</a>
             </section>
 
             <table class="table-show">

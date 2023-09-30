@@ -4,7 +4,7 @@
             <h1>Lista de Maestros</h1>
             <section>
                 <h2>Informacion de Maestros</h2>
-                <a href="/src/views/create_teacher.php">Agregar Maestro</a>
+                <a class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded text-white" href="/src/views/create_teacher.php">Agregar Maestro</a>
             </section>
 
             <table class="">

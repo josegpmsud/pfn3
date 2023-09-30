@@ -9,14 +9,14 @@
     <title>University</title>
 </head>
 
-<body class="bg-orange-100 h-screen flex justify-center items-center">
+<body class="bg-[#FFF5D2] ">
    
-    <main class="w-screen">
-        <div class="w-1000">
-            <div class="h-56">
+    <main class="w-screen flex justify-center">
+        <div class="flex flex-col items-center gap-6">
+            <div class="h-80">
                 <img src="/assets/logo.jpg" alt="logo" class="h-full">
             </div>
-            <section class="h-72 w-100 flex justify-center flex-col items-center bg-slate-50  ">
+            <section class="h-60 w-full flex justify-center flex-col items-center bg-slate-50  rounded-md shadow-lg hover:shadow-xl">
                 
                 <h1 class="">Bienvenido Ingresa con tu cuenta</h1>
 
@@ -31,26 +31,27 @@
                 ?></em>
 
                 </p>
-
-                <form action="/src/handle_db/login.php" method="post">
-
+                <form class="" action="/src/handle_db/login.php" method="post">
                     <div class="">
+                    <br>
+                    <div class="flex items-center border-neutral-300">
                         
                         <input class="" type="email" placeholder="Email" name="email" autofocus require>
                         <span class="material-symbols-outlined"> mail </span>
                         
                     </div>
-
-                    <div class="">
+                    <br>
+                    <div class="flex items-center">
                         
                         <input class="" type="password" placeholder="Password" name="contrasena" require>
                         <span class="material-symbols-outlined"> lock </span>
                     
                     </div>
-
+                    <br>
                     <div class="">
-                        <button class="bg-sky-500 text-white" type="submit">Ingresar</button>
+                        <button class="bg-[#007CFE] text-white w-32 h-10 rounded-md" type="submit">Ingresar</button>
                     </div>
+                </div>
                 </form>
 
 
@@ -60,8 +61,8 @@
                 
             </section>
             
-            <div class="">
-                <p class="">Información de Acceso</p>
+            <div class="w-60 bg-white p-5">
+                <p class="bor">Información de Acceso</p>
                 <p class="">Admin</p>
                 <p class="">user: admin@admin</p>
                 <p class="">pass: admin</p>
@@ -77,12 +78,7 @@
         </div>
     </main>
     
-    <?php
-            $pass = password_hash("alumno", PASSWORD_DEFAULT);
-
-            //echo "<h1>". $pass ."</h1>";
-        ?>
-
+    
 
 
 </body>

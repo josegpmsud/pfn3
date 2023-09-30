@@ -92,5 +92,12 @@
 
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
+# hash contraseñas
+
+<?php
+            $pass = password_hash("alumno", PASSWORD_DEFAULT);
+
+            //echo "<h1>". $pass ."</h1>";
+        ?>
 
 

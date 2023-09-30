@@ -64,7 +64,7 @@
 
                 <div class="">
                     <button
-                        class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded"
+                        class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded text-white"
                         type="submit">Guardar cambios</button>
                 </div>
             </form>
