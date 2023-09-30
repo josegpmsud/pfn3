@@ -71,7 +71,9 @@
     </span><a href='/src/views/student_qualifications.php'>Ver Calificaciones</a></p>
     <p><span class='material-symbols-outlined'>
             co_present
-        </span><a href='/src/views/student_matters.php'>Administra tus Clases</a></p>
+        </span><a href='/src/views/student_matters_multiple.php'>Administra tus Clases</a>
+        
+        </p>
     
     <p>
         <form action='/src/views/edit_user.php' method='post'>
