@@ -13,7 +13,7 @@
         <p><?= $_SESSION['sesion']['nombre']; ?></p>
         <?php $id_usuario = $_SESSION['sesion']['id_usuario'];?>
 
-        <a href="/src/views/desing_table.php">Ejemplo tabla</a>
+        
 
     </section>
     <?php if($_SESSION['sesion']['id_rol'] == 1){

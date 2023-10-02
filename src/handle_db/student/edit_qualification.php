@@ -3,6 +3,8 @@
         $id_inscripcion = $_POST["id_inscripcion"];
         $id_clase = $_POST["id_clase"];
         
+        session_start();
+        $_SESSION['id_clase']=$_POST["id_clase"];
 
         require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 
@@ -17,6 +19,6 @@
         }
         
         
-        header("Location: /src/views/teacher_students.php?id_clase=$id_clase");          
+        header("Location: /src/views/teacher_students.php");          
     }    
 ?>

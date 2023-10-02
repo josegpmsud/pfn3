@@ -62,18 +62,21 @@
             </section>
             
             <div class="w-60 bg-white p-5">
-                <p class="bor">Información de Acceso</p>
+                <p class="">Información de Acceso</p>
+                <hr>
                 <p class="">Admin</p>
                 <p class="">user: admin@admin</p>
                 <p class="">pass: admin</p>
+                <hr>
                 <p class="">Maestros</p>
                 <p class="">user: maestro@maestro</p>
                 <p class="">pass: maestro</p>
+                <hr>
                 <p class="">Alumnos</p>
                 <p class="">user: alumno@alumno</p>
                 <p class="">pass: alumno</p>
-
-                <p class="">Cuando cree un alumno o maestro nuevo la contraseña por defecto es igual al correo electronico</p>
+                <hr>
+                <p class="">Nota: Cuando cree un alumno o maestro nuevo la contraseña por defecto es igual al Email</p>
             </div>
         </div>
     </main>
