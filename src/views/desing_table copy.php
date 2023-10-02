@@ -178,9 +178,9 @@ while($row = $stmnt->fetch_assoc()){
             
         </tbody>
         <tfoot>
-            <tr class="font-semibold  text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                <th scope="row" class="px-6 py-3 text-base ">Total</th>
-                <td class="px-6 py-3 text-base"><?= $total?></td>                
+            <tr class="font-semibold text-gray-900 dark:text-white">
+                <th scope="row" class="px-6 py-3 text-base">Total</th>
+                <td class="px-6 py-3"><?= $total?></td>                
             </tr>
         </tfoot>
     </table>    
