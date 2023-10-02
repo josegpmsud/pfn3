@@ -32,17 +32,19 @@
 
 
 - El admin puede ver la cantidad de alumnos inscritos en cada clase.
-- Cada maestro puede Crear, Leer, Actualizar y Eliminar calificaciones y comentarios de sus alumnos.
+- Cada maestro puede Crear, Leer, Actualizar y Borrar calificaciones y comentarios de sus alumnos.
 - El alumno puede ver en la pestaña "Ver Calificaciones" un mensaje dejado por el maestro y la calificación de cada curso.
 
 - Desarrollar toda la interfaz del usuario (UI) desde cero.
 
+- DarkMode en tablas y algunos elementos
+
 #### Alguna otra funcionalidad acorde a la lógica del negocio.
 
 - Una maestro puede estar asignado a varias clases
-- Eliminar maestros requiere que dicho maestro no tenga cursos asignados.
+- Eliminar maestros requiere que dicho maestro no tenga clases asignados.
 - Eliminar clases requiere que dicho clase no tenga alumnos inscritos.
-- Eliminar alumno requiere que dicho alumno no tenga clases inscritas.
+- Eliminar alumno requiere que dicho alumno no tenga clases inscritas.(primero debe retirar materias)
 
 
 # Base de datos:

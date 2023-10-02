@@ -1,4 +1,3 @@
-
 <aside class="w-64  bg-[#353A40] text-white rounded-md m-2 p-6">
     <section class="w-full flex items-center border-solid border-b-2 p-2  border-white gap-4">
         <div class="rounded-md">
@@ -13,7 +12,7 @@
         <p><?= $_SESSION['sesion']['nombre']; ?></p>
         <?php $id_usuario = $_SESSION['sesion']['id_usuario'];?>
 
-        
+
 
     </section>
     <?php if($_SESSION['sesion']['id_rol'] == 1){
@@ -102,9 +101,9 @@
     ";
     } 
     ?>
-                        
-                        
-                        
+
+
+
 
 
 
