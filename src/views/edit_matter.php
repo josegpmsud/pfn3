@@ -22,7 +22,7 @@
         <div class="">
             <label for="nombre_clase" class=""> Nombre de la materia </label><br>
             <input class="" type="text" name="nombre_clase" placeholder="Ingresa nombre materia"
-                value="<?= $nombre_clase?>">
+                value="<?= $nombre_clase?>" required>
         </div>
         <div class="">
             <label for="id_usuario_maestro" class=""> Maestro para la clase </label>

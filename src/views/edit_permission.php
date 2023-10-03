@@ -22,7 +22,7 @@
 
         <div class="">
             <label for="email" class=""> Email del usuario</label><br>
-            <input class="" type="email" name="email" placeholder="Ingresa email" value="<?= $email?>">
+            <input class="" type="email" name="email" placeholder="Ingresa email" value="<?= $email?>" required>
         </div>
         <div class="">
             <label for="id_rol" class=""> Rol del usuario </label>
