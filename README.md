@@ -1,3 +1,32 @@
+## Consideraciones adicionales ya implementadas en el sistema:
+
+
+- Activar o desactivar a un usuario en el panel de administrador (quiere decir que si un usuario ha sido desactivado, no debería poder acceder con sus credenciales hasta que sea activado nuevamente).
+
+- El admin puede ver la cantidad de alumnos inscritos en cada clase.
+
+- Cada maestro pueder ver sus clases y calificar a los alumnos y dejar un mensaje
+
+- Cada maestro puede Crear, Leer, Actualizar y Borrar calificaciones y comentarios de sus alumnos.
+
+- El alumno puede ver en la pestaña "Ver Calificaciones" un mensaje dejado por el maestro y la calificación de cada curso.
+
+- Desarrollar toda la interfaz del usuario (UI) desde cero.
+
+- DarkMode en tablas y algunos elementos
+
+- Una maestro puede estar asignado a varias clases
+
+- Eliminar maestros requiere que dicho maestro no tenga clases asignados.
+
+- Eliminar clases requiere que dicho clase no tenga alumnos inscritos.
+
+- Eliminar alumno requiere que dicho alumno no tenga clases inscritas.(primero debe retirar materias)
+
+- otros por descubrir jeje.
+
+
+
 # Instrucciones
 
 Bienvenido al proyecto final del nivel 3. En este proyecto estaremos aplicando los conocimientos adquiridos a lo largo del nivel. Sigue las instrucciones de este archivo para completar el proyecto y ten en cuenta que estas mismas se tomarán en cuenta para la evaluación final del proyecto.
