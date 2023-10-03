@@ -5,7 +5,7 @@
 
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-            Lista de Clases de <?= $_SESSION['sesion']['nombre'] ." ". $_SESSION['sesion']['nombre'] ;?>
+            Lista de Clases de <?= $_SESSION['sesion']['nombre'] ." ". $_SESSION['sesion']['apellido'] ;?>
             <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Informacion de Clases</p>
         </caption>
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -94,6 +94,7 @@ while($row = $stmnt->fetch_assoc()){
                 <td class='px-6 py-4 text-center'>
                 
                 <form action='/src/views/teacher_students.php' method='post'>
+                <input name='nombre_clase' hidden type='text' value='$nombre_clase'>
                 <input name='id_clase' hidden type='text' value='$id_clase'>
                 <button type='submit'>
                     <span class='material-symbols-outlined text-blue-600 dark:text-blue-500'>

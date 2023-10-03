@@ -12,8 +12,9 @@
 <section class=" bg-orange-200 rounded-md gap-3 w-96 p-6 shadow-lg hover:shadow-xl">
     <form action="/src/handle_db/edit_user.php" method="post">
 
-        <h1>Editar
+        <h1 class="text-3xl ">Editar
             <?php
+                    if($result['id_rol']==1){echo "Administrador";}
                     if($result['id_rol']==2){echo "Maestro";}
                     if($result['id_rol']==3){echo "Alumno";}
                     ?>
@@ -33,7 +34,7 @@
         <label class="" for="email">Correo Electronico</label><br>
         <input class="" id="email" type="text" name="email" placeholder="Ingresa Email" value="<?= $result['email']?>">
 
-        <?php if($_SESSION['sesion']['id_rol'] != 1){?>
+        <?php if($_SESSION['sesion']['id_rol'] != 1 || isset($_POST['edit'])){?>
         <br> <br>
 
         <label class="" for="contrasena">Contraseña: ingresa para cambiar contraseña</label><br>
@@ -70,7 +71,8 @@
         <br> <br>
 
 
-        <a href="#">Close</a>
+        <a class="bg-slate-500  hover:bg-slate-800  active:scale-110 font-bold py-2 px-4 rounded text-white" href="<?=$_SERVER["HTTP_REFERER"]?>">Close</a>
+
         <button class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded text-white"
             type="submit">Guardar cambios</button>
 

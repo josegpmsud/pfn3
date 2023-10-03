@@ -1,11 +1,19 @@
 <?php require_once($_SERVER["DOCUMENT_ROOT"] . "/src/section/ini.php");?>
 
+<?php 
+if(isset($_POST['nombre_clase'])){
+    
+}else{
+    $_POST['nombre_clase']=$_SESSION["nombre_clase"];
+}
+?>
+
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 
 
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-            Lista de Alumnos
+            Lista de Alumnos de la clase <?= $_POST['nombre_clase']?>
             <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Informacion de Alumnos</p>
         </caption>
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -58,10 +66,14 @@ if(isset($_POST['id_clase'])){
 }else{
     $_POST['id_clase']=$_SESSION["id_clase"];
 }
+
+
+
 require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 $total = 0;
 $id_clase = $_POST['id_clase'];
 $id_clase2 = $_POST['id_clase'];
+$nombre_clase_b = $_POST['nombre_clase'];
 
                 $stmnt = $mysqli->query("SELECT * FROM usuarios u inner join inscripciones i on u.id_usuario = i.id_usuario_alumno where id_clase = '$id_clase'");
 
@@ -79,6 +91,8 @@ $id_clase2 = $_POST['id_clase'];
                     $id_inscripcion = $row["id_inscripcion"];
                     $nota_alumno = $row["nota_alumno"];
                     $mensaje = $row["mensaje"];
+
+                    
                     
     echo " 
         <tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
@@ -90,7 +104,7 @@ $id_clase2 = $_POST['id_clase'];
                 $nombre $apellido
                 </td>
                 <td><form action='../handle_db/student/edit_qualification.php' method='post'>
-
+                <input hidden name='nombre_clase'  type='text' value='$nombre_clase_b'>
                 <input hidden name='id_clase'  type='text' value='$id_clase2'>
 
                 <input hidden name='id_inscripcion'  type='text' value='$id_inscripcion'>

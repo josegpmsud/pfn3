@@ -79,6 +79,13 @@ $total = 0;
                     if($estado){
                         $estado_d = "<span class='bg-green-500   rounded-md p-1 text-white'>Activo</span>";
                     }else{ $estado_d = "<span class='bg-red-500 rounded-md p-1 text-white'>Inactivo</span>";}
+
+                    if($descripcion == "administrador"){
+                        $descripcion_d = "<span class='bg-yellow-600    rounded-md p-1 text-white'>$descripcion</span>";
+                    }elseif(($descripcion == "maestro")){ 
+                        $descripcion_d = "<span class='bg-blue-400      rounded-md p-1 text-white'>$descripcion</span>";
+                    }else{$descripcion_d = "<span class='bg-slate-500   rounded-md p-1 text-white'>$descripcion</span>";}
+
     
     echo " 
         <tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
@@ -90,7 +97,7 @@ $total = 0;
                 $email
                 </td>
                 <td class='px-6 py-4'>
-                $descripcion
+                $descripcion_d
                 </td>
                 <td>
                 $estado_d
