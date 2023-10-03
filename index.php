@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/ico.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>University</title>
 </head>
@@ -18,7 +19,7 @@
             </div>
             <section class="h-60 w-full flex justify-center flex-col items-center bg-slate-50  rounded-md shadow-lg hover:shadow-xl">
                 
-                <h1 class="">Bienvenido Ingresa con tu cuenta</h1>
+                <h1 class="">Bienvenido, Ingresa con tu cuenta</h1>
 
                 <p class="">
                     <em class="">

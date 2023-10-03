@@ -27,16 +27,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             if($_SESSION['sesion']['estado'] == 0){
                 session_destroy();
                 header("Location: /index.php");
-            }
-
-            echo "ingresaste correctamente";
-            
+            }                     
             header("Location: /src/views/dashboard.php");
         }else{
             
             header("Location: /index.php");
             
         }
+    }else{
+        header("Location: /index.php");
     }
 
     }catch(mysqli_sql_exception $e){
