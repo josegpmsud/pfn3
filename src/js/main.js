@@ -7,6 +7,4 @@ btnDM.addEventListener("click", ()=>{
     }else{
         body.classList.add("dark")
     }
-
-
 })
