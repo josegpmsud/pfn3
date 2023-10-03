@@ -7,7 +7,7 @@
 
         <div class="">
             <label for="nombre_clase" class=""> Nombre de la materia </label><br>
-            <input class="" type="nombre_clase" name="nombre_clase" placeholder="Ingresa nombre materia">
+            <input class="" type="nombre_clase" name="nombre_clase" placeholder="Ingresa nombre materia" required>
         </div>
         <div class="">
             <label for="id_usuario_maestro" class=""> Maestro para la clase </label>

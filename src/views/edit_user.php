@@ -26,13 +26,13 @@
 
 
         <label class="" for="dni">DNI</label><br>
-        <input class="" id="dni" type="text" name="dni" placeholder="Ingresa DNI" value="<?= $result['dni']?>">
+        <input class="" id="dni" type="text" name="dni" placeholder="Ingresa DNI" value="<?= $result['dni']?>" required>
 
 
         <br> <br>
 
         <label class="" for="email">Correo Electronico</label><br>
-        <input class="" id="email" type="text" name="email" placeholder="Ingresa Email" value="<?= $result['email']?>">
+        <input class="" id="email" type="text" name="email" placeholder="Ingresa Email" value="<?= $result['email']?>" required>
 
         <?php if($_SESSION['sesion']['id_rol'] != 1 || isset($_POST['edit'])){?>
         <br> <br>
@@ -47,13 +47,13 @@
 
         <label class="" for="nombre">Nombre(s)</label><br>
         <input class="" id="nombre" type="text" name="nombre" placeholder="Ingresa nombre(s)"
-            value="<?= $result['nombre']?>">
+            value="<?= $result['nombre']?>" required>
 
         <br> <br>
 
         <label class="" for="apellido">Apellidos(s)</label><br>
         <input class="" id="apellido" type="text" name="apellido" placeholder="Ingresa apellido(s)."
-            value="<?= $result['apellido']?>">
+            value="<?= $result['apellido']?>" required>
 
         <br> <br>
 
@@ -66,7 +66,7 @@
 
         <label class="" for="fecha_nac">Fecha de nacimiento</label><br>
         <input class="" id="fecha_nac" type="date" name="fecha_nac" placeholder="mm/dd/yyyy"
-            value="<?= $result['fecha_nac']?>">
+            value="<?= $result['fecha_nac']?>" required>
 
         <br> <br>
 

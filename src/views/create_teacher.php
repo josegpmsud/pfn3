@@ -8,33 +8,33 @@
         <input type="text" hidden name="id_rol" id="id_rol" value="2">
 
         <label class="" for="dni">DNI</label><br>
-        <input type="text" name="dni" id="dni" placeholder="Ingrese la DNI">
+        <input type="text" name="dni" id="dni" placeholder="Ingrese la DNI" required>
 
         <br> <br>
 
         <label class="" for="email">Correo Electronico</label><br>
-        <input class="" id="email" type="text" name="email" placeholder="Ingresa Email">
+        <input class="" id="email" type="text" name="email" placeholder="Ingresa Email" required>
 
         <br> <br>
 
         <label class="" for="nombre">Nombre(s)</label><br>
-        <input class="" id="nombre" type="text" name="nombre" placeholder="Ingresa nombre(s)">
+        <input class="" id="nombre" type="text" name="nombre" placeholder="Ingresa nombre(s)" required>
 
         <br> <br>
 
         <label class="" for="apellido">Apellidos(s)</label><br>
-        <input class="" id="apellido" type="text" name="apellido" placeholder="Ingresa apellido(s).">
+        <input class="" id="apellido" type="text" name="apellido" placeholder="Ingresa apellido(s)." required>
 
         <br> <br>
 
 
         <label class="" for="direccion">Dirección</label><br>
-        <input class="" id="direccion" type="text" name="direccion" value="" placeholder="Ingresa la dirección">
+        <input class="" id="direccion" type="text" name="direccion" value="" placeholder="Ingresa la dirección" required>
 
         <br> <br>
 
         <label class="" for="fecha_nac">Fecha de nacimiento</label><br>
-        <input class="" id="fecha_nac" type="date" name="fecha_nac" placeholder="mm/dd/yyyy">
+        <input class="" id="fecha_nac" type="date" name="fecha_nac" placeholder="mm/dd/yyyy" required>
 
         <br> <br>
 
