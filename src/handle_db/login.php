@@ -31,13 +31,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             header("Location: /src/views/dashboard.php");
         }else{
             session_start();
-            $_SESSION['mess']="Igreso no permitido";
+            $_SESSION['mess']="Ingreso no permitido";
             header("Location: /index.php");
             
         }
     }else{
         session_start();
-        $_SESSION['mess']="Igreso no permitido";
+        $_SESSION['mess']="Ingreso no permitido";
         header("Location: /index.php");
     }
 
