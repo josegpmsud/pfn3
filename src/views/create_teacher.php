@@ -3,7 +3,7 @@
 <section class=" bg-orange-200 rounded-md gap-3 w-96 p-6 shadow-lg hover:shadow-xl">
     <form action="/src/handle_db//teacher/create_teacher.php" method="post" enctype="multipart/form-data">
 
-        <h1>Agregar Maestro</h1>
+        <h1 class="text-3xl font-bold underline">Agregar Maestro</h1>
 
         <input type="text" hidden name="id_rol" id="id_rol" value="2">
 
