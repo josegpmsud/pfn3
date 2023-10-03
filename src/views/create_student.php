@@ -3,7 +3,7 @@
 <section class=" bg-orange-200 rounded-md gap-3 w-96 p-6 shadow-lg hover:shadow-xl">
     <form action="/src/handle_db//student/create_student.php" method="post" enctype="multipart/form-data">
 
-        <h1>Agregar Alumno</h1>
+        <h1 class="text-3xl font-bold underline">Agregar Alumno</h1>
 
         <input type="text" hidden name="id_rol" id="id_rol" value="3">
 
