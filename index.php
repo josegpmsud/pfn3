@@ -22,7 +22,7 @@
                 <h1 class="">Bienvenido, Ingresa con tu cuenta</h1>
 
                 <p class="">
-                    <em class="">
+                    <em class="text-red-500 ">
                         <?php
                 session_start();
                 if(isset($_SESSION['mess'])){
