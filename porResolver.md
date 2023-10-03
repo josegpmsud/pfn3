@@ -1,50 +1,46 @@
-# por resolver en codigo
+## Por implementar o mejorar
 
-## Consideraciones para la calificación por cumplir
+- confirmacion antes de eliminacion
+
+- dejar mensajes al usuario (cuando intenta hacer algo no permitido)
+
+- validar formularios para que no ingresen caracteres especiales si no se require
+
+- validar que no se pueda cambiar el rol de un maestro o alumno que ya tenga clases asignadas
+
+- mejorar estilos 
+
+- formatear codigo en php
+
+- otros por identificar
 
 
-- diseño con tailwind css
-- mejorar renderizado de ini y fin (para arreglar footer y otras secciones importantes)
-
-
-### admin
-
-- Relacionar un maestro a un curso (o más, si gustas).
-- Eliminar maestros no requiere que dicho maestro no tenga cursos asignados, se puede eliminar un maestro sin necesidad de dicha corroboración.
-- Cambiar el rol de cada usuario (no se permite crear nuevos roles). validar si si tiene clases, que dependan de el o inscripciones si fuera alumno
-
-- cuando se edite los permisos de usuario ¿que se debe hacer con maestros o alumnos que ya tengan clases asignadas?.
-
-- habilitar los botones eliminar
-
-- que aparesca el nombre de la clase, o nombre del alumno o maestro con la tabla actual que se este trabajando
-
-- eliminar alumnos, maestros 
-
-- agregar multi-seleccion a inscripcion de alumnos(ejemlo del profesor en clases)
-
-- agregar asignacion de maestros clases
-
-## Consideraciones OPCIONALES que suman puntos:
+## Consideraciones ya adicionales implementadas en el sistema:
 
 
 - Activar o desactivar a un usuario en el panel de administrador (quiere decir que si un usuario ha sido desactivado, no debería poder acceder con sus credenciales hasta que sea activado nuevamente).
 
-
 - El admin puede ver la cantidad de alumnos inscritos en cada clase.
+
+- Cada maestro pueder ver sus clases y calificar a los alumnos y dejar un mensaje
+
 - Cada maestro puede Crear, Leer, Actualizar y Borrar calificaciones y comentarios de sus alumnos.
+
 - El alumno puede ver en la pestaña "Ver Calificaciones" un mensaje dejado por el maestro y la calificación de cada curso.
 
 - Desarrollar toda la interfaz del usuario (UI) desde cero.
 
 - DarkMode en tablas y algunos elementos
 
-#### Alguna otra funcionalidad acorde a la lógica del negocio.
-
 - Una maestro puede estar asignado a varias clases
+
 - Eliminar maestros requiere que dicho maestro no tenga clases asignados.
+
 - Eliminar clases requiere que dicho clase no tenga alumnos inscritos.
+
 - Eliminar alumno requiere que dicho alumno no tenga clases inscritas.(primero debe retirar materias)
+
+- otros por descubrir jeje.
 
 
 # Base de datos:
