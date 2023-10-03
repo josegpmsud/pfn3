@@ -39,7 +39,8 @@
         <br> <br>
 
 
-        <a href="">Close</a>
+        <a class="bg-slate-500  hover:bg-slate-800  active:scale-110 font-bold py-2 px-4 rounded text-white" href="<?=$_SERVER["HTTP_REFERER"]?>">Close</a>
+
         <button class="bg-green-500 hover:bg-green-700 active:scale-110 font-bold py-2 px-4 rounded text-white"
             type="submit">Crear</button>
 

@@ -7,7 +7,8 @@
     </a>
     <button class="text-slate-800 dark:text-white" id="darkMode"><span
             class="material-symbols-outlined">brightness_6</span></button>
-
+   
+            
     <label class="text-slate-800 dark:text-white flex" for="login"><?= $_SESSION['sesion']['nombre'] . " " . $_SESSION['sesion']['apellido'] . "<a class='text- text-red-600  ' href='/src/handle_db/closesesion.php'><span class='material-symbols-outlined'>
 logout
 </span></a>" ?></label>

@@ -2,9 +2,11 @@
     if ($_SERVER["REQUEST_METHOD"] === "POST"){
         $id_inscripcion = $_POST["id_inscripcion"];
         $id_clase = $_POST["id_clase"];
+        $nombre_clase = $_POST["nombre_clase"];
         
         session_start();
-        $_SESSION['id_clase']=$_POST["id_clase"];
+        $_SESSION['id_clase'] = $_POST["id_clase"];
+        $_SESSION['nombre_clase'] = $_POST["nombre_clase"];
 
         require_once($_SERVER["DOCUMENT_ROOT"] . "/src/config/database.php");
 

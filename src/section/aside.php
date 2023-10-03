@@ -36,7 +36,23 @@
     <p><a class='hover:bg-violet-600 flex items-center gap-4' href='/src/views/matters.php'><span class='material-symbols-outlined'>
     co_present
 </span> Clases</a></p>
-    </section>    
+<br>
+<hr>
+<br>      
+<p>
+<form action='/src/views/edit_user.php' method='post'>
+<input name='edit' hidden type='text' value='1'>
+<input name='id_usuario' hidden type='text' value='$id_usuario'>
+<button class='hover:bg-violet-600 flex items-center gap-4' type='submit'>
+    <span class='material-symbols-outlined'>
+        manage_accounts
+    </span>
+    Editar perfil
+</button>
+</form>
+</p>
+
+</section>    
     ";
     } 
     ?>
